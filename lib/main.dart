@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:motion_hack_1/pages/login.dart';
-import 'package:motion_hack_1/screen/SplashScreen.dart';
+import 'package:motion_hack_1/screen/splashscreen.dart';
 
 void main() {
   runApp(const MyApp());
