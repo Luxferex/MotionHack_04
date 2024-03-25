@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:motion_hack_1/pages/login.dart';
+import 'package:motion_hack_1/screen/MainScreen.dart';
 import 'package:motion_hack_1/screen/SplashScreen.dart';
 
 void main() {
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => SplashScreen(),
         '/login': (context) => login(),
+        '/home': (context) => MainScreen(),
       },
     );
   }
