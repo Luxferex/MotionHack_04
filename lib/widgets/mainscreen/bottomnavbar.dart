@@ -12,25 +12,25 @@ class BottomNavBar extends StatelessWidget {
       items: [
         // Home
         BottomNavigationBarItem(
-          activeIcon: Icon(Icons.home, size: 30),
+          activeIcon: Image.asset("assets/icons/ic_active_home.png"),
           icon: Image.asset("assets/icons/ic_home.png"),
           label: '',
         ),
         // Sumbang
         BottomNavigationBarItem(
-          activeIcon: Icon(Icons.menu_book, size: 30),
+          activeIcon: Image.asset("assets/icons/ic_active_sumbang.png"),
           icon: Image.asset("assets/icons/ic_sumbang.png"),
           label: '',
         ),
         // Wishlist
         BottomNavigationBarItem(
-          activeIcon: Icon(Icons.location_on, size: 30),
+          activeIcon: Image.asset("assets/icons/ic_active_wishlist.png"),
           icon: Image.asset("assets/icons/ic_wishlist.png"),
           label: '',
         ),
         // Profile
         BottomNavigationBarItem(
-          activeIcon: Icon(Icons.build, size: 30),
+          activeIcon: Image.asset("assets/icons/ic_active_profile.png"),
           icon: GestureDetector(
             onTap: () {
               // Replace with your navigation logic (e.g., push a new page)
