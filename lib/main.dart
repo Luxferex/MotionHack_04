@@ -6,6 +6,7 @@ import 'package:motion_hack_1/pages/login.dart';
 import 'package:motion_hack_1/pages/profile/tokoPilihan.dart';
 import 'package:motion_hack_1/pages/registration.dart';
 import 'package:motion_hack_1/pages/profile/riwayatTransaksi.dart';
+import 'package:motion_hack_1/screen/DetailScreen.dart';
 import 'package:motion_hack_1/screen/MainScreen.dart';
 import 'package:motion_hack_1/screen/splashscreen.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
         '/alamat': (context) => DaftarAlamatPage(),
         '/transaksi': (context) => RiwayatTransaksi(),
         '/tokoPil': (context) => tokoPilihan(),
+        '/detail': (context) => DetailScreen(),
       },
       builder: (context, child) {
         return SafeArea(
