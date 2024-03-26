@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:motion_hack_1/pages/HomePage.dart';
+import 'package:motion_hack_1/pages/Homepage.dart';
 import 'package:motion_hack_1/screen/VarText.dart';
 import 'package:motion_hack_1/screen/VarScreen.dart';
 
