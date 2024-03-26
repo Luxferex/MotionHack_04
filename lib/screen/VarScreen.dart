@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:motion_hack_1/pages/indicator.dart';
-import 'package:motion_hack_1/buttons/registerbutton.dart';
+import 'package:motion_hack_1/widgets/buttons/registerbutton.dart';
 import 'package:motion_hack_1/screen/VarText.dart';
-import 'package:motion_hack_1/buttons/loginbutton.dart';
+import 'package:motion_hack_1/widgets/buttons/loginbutton.dart';
 
 enum IndicatorType { CIRCLE, LINE, DIAMOND }
 
