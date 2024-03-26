@@ -7,9 +7,15 @@ class RiwayatView extends StatelessWidget {
     "assets/icons/ic_fashion.png",
     "assets/icons/ic_makanan.png",
     "assets/icons/ic_kosmetik.png",
+    "assets/icons/ic_fashion.png",
+    "assets/icons/ic_makanan.png",
+    "assets/icons/ic_kosmetik.png",
   ];
 
   final List<dynamic> categoryName = [
+    "Fashion",
+    "Makanan",
+    "Kosmetik",
     "Fashion",
     "Makanan",
     "Kosmetik",
@@ -18,7 +24,10 @@ class RiwayatView extends StatelessWidget {
   final List<dynamic> message = [
     "Kamu telah menyumbang 10 baju!",
     "Kamu telah menyumbang 5 makanan!",
-    "Kamu telah menyumbang 5  kosmetik!",
+    "Kamu telah menyumbang 5 kosmetik!",
+    "Kamu telah menyumbang 10 baju!",
+    "Kamu telah menyumbang 5 makanan!",
+    "Kamu telah menyumbang 5 kosmetik!",
   ];
 
   @override
