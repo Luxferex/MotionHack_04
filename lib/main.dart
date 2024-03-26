@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:motion_hack_1/pages/HomePage.dart';
-import 'package:motion_hack_1/pages/ProfilePage.dart';
+import 'package:motion_hack_1/pages/profile/ProfilePage.dart';
 import 'package:motion_hack_1/pages/alamat/mainAlamat.dart';
 import 'package:motion_hack_1/pages/login.dart';
+import 'package:motion_hack_1/pages/profile/tokoPilihan.dart';
 import 'package:motion_hack_1/pages/registration.dart';
+import 'package:motion_hack_1/pages/profile/riwayatTransaksi.dart';
 import 'package:motion_hack_1/screen/MainScreen.dart';
 import 'package:motion_hack_1/screen/splashscreen.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -16,7 +18,7 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,6 +34,13 @@ class MyApp extends StatelessWidget {
         '/home': (context) => HomePage(),
         '/profil': (context) => Profile(),
         '/alamat': (context) => DaftarAlamatPage(),
+        '/transaksi': (context) => RiwayatTransaksi(),
+        '/tokoPil': (context) => tokoPilihan(),
+      },
+      builder: (context, child) {
+        return SafeArea(
+          child: child!,
+        );
       },
     );
   }

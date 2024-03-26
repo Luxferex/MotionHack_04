@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:motion_hack_1/pages/HomePage.dart';
-import 'package:motion_hack_1/pages/ProfilePage.dart';
+import 'package:motion_hack_1/pages/profile/ProfilePage.dart';
 import 'package:motion_hack_1/pages/SumbangPage.dart';
 import 'package:motion_hack_1/pages/WishlistPage.dart';
 import 'package:motion_hack_1/widgets/bottomnavbar.dart';
