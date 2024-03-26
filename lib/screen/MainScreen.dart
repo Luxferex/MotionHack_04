@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:motion_hack_1/pages/HomePage.dart';
-import 'package:motion_hack_1/pages/profile/ProfilePage.dart';
 import 'package:motion_hack_1/pages/SumbangPage.dart';
 import 'package:motion_hack_1/pages/WishlistPage.dart';
-import 'package:motion_hack_1/widgets/bottomnavbar.dart';
+import 'package:motion_hack_1/pages/profile/ProfilePage.dart';
+import 'package:motion_hack_1/widgets/mainscreen/bottomnavbar.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -19,7 +19,7 @@ class _MainScreenState extends State<MainScreen> {
     HomePage(),
     SumbangPage(),
     WishlistPage(),
-    Profile(),
+    ProfilePage(),
   ];
 
   void onClicked(int index) {
