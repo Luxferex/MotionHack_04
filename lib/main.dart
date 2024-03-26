@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
         '/Registration': (context) => Registration(),
         '/main': (context) => MainScreen(),
         '/home': (context) => HomePage(),
-        '/profil': (context) => Profile(),
+        '/profil': (context) => ProfilePage(),
         '/alamat': (context) => DaftarAlamatPage(),
         '/transaksi': (context) => RiwayatTransaksi(),
         '/tokoPil': (context) => tokoPilihan(),
