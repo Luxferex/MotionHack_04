@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:motion_hack_1/pages/HomePage.dart';
+import 'package:motion_hack_1/pages/ProfilePage.dart';
 import 'package:motion_hack_1/pages/alamat/mainAlamat.dart';
-
 import 'package:motion_hack_1/pages/login.dart';
-import 'package:motion_hack_1/pages/profile/mainProfile.dart';
 import 'package:motion_hack_1/pages/registration.dart';
 import 'package:motion_hack_1/screen/MainScreen.dart';
 import 'package:motion_hack_1/screen/splashscreen.dart';
@@ -24,14 +23,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Motion_Hack_04',
-      initialRoute: '/main',
+      initialRoute: '/',
       routes: {
         '/': (context) => SplashScreen(),
         '/login': (context) => login(),
         '/Registration': (context) => Registration(),
         '/main': (context) => MainScreen(),
         '/home': (context) => HomePage(),
-        '/profil': (context) => ProfilePage(),
+        '/profil': (context) => Profile(),
         '/alamat': (context) => DaftarAlamatPage(),
       },
     );

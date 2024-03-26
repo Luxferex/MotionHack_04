@@ -19,7 +19,7 @@ class _MainScreenState extends State<MainScreen> {
     HomePage(),
     SumbangPage(),
     WishlistPage(),
-    ProfilePage(),
+    Profile(),
   ];
 
   void onClicked(int index) {
