@@ -1,7 +1,5 @@
 import 'package:colorful_safe_area/colorful_safe_area.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:motion_hack_1/widgets/detailscreen/ItemViewHorizontal.dart';
 import 'package:motion_hack_1/widgets/detailscreen/ProductDetail.dart';
 import 'package:motion_hack_1/widgets/detailscreen/TokoView.dart';

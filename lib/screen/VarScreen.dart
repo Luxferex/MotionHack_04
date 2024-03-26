@@ -128,6 +128,7 @@ class _IntroScreensState extends State<IntroScreens>
 
   TextStyle get textStyle =>
       currentScreen!.textStyle ??
+      // ignore: deprecated_member_use
       Theme.of(context).textTheme.bodyText1 ??
       GoogleFonts.lato(
         fontSize: 18,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class varText extends StatelessWidget {
   ///This is a builder for an intro screen
   ///
