@@ -23,6 +23,7 @@ class IntroScreens extends StatefulWidget {
   ///sets the next widget, the one used to move to the next screen
   ///[Widget]
   final Widget? nextWidget;
+  final Widget? backWidget;
 
   ///sets the done widget, the one used to end the slides
   ///[Widget]
@@ -41,14 +42,6 @@ class IntroScreens extends StatefulWidget {
   ///sets your slides
   ///[List<IntroScreen>]
   final List<varText> slides;
-
-  ///sets the skip widget text
-  ///[String]
-  final String skipText;
-
-  ///defines what to do when the skip button is tapped
-  ///[Function]
-  final Function? onSkip;
 
   ///defines what to do when the last slide is reached
   ///[Function]
@@ -96,12 +89,11 @@ class IntroScreens extends StatefulWidget {
     this.indicatorType = IndicatorType.CIRCLE,
     this.appTitle = '',
     this.physics = const BouncingScrollPhysics(),
-    this.onSkip,
     this.nextWidget,
+    this.backWidget,
     this.doneWidget,
     this.activeDotColor = Colors.white,
     this.inactiveDotColor,
-    this.skipText = 'Skip',
     this.viewPortFraction = 1.0,
     this.textColor = Colors.white,
     this.footerPadding = const EdgeInsets.all(24),
@@ -133,12 +125,6 @@ class _IntroScreensState extends State<IntroScreens>
     animationController =
         AnimationController(duration: Duration(milliseconds: 500), vsync: this);
   }
-
-  get onSkip => this.widget.onSkip != null ? this.widget.onSkip : defaultOnSkip;
-
-  defaultOnSkip() => _controller!.jumpToPage(
-        2,
-      );
 
   TextStyle get textStyle =>
       currentScreen!.textStyle ??
@@ -197,8 +183,6 @@ class _IntroScreensState extends State<IntroScreens>
         child: Stack(
           clipBehavior: Clip.none,
           children: <Widget>[
-            //LOGIN BUTTON YANG DIEDIT
-
             PageView.builder(
               itemCount: widget.slides.length,
               onPageChanged: (index) {
@@ -292,8 +276,8 @@ class _IntroScreensState extends State<IntroScreens>
                       SizedBox(
                         height: 50,
                       ),
-                      LoginButton(),
-                      RegisterButton(),
+                      if (currentPage == 2) LoginButton(),
+                      if (currentPage == 2) RegisterButton(),
                     ],
                   ),
                 ),
@@ -312,23 +296,29 @@ class _IntroScreensState extends State<IntroScreens>
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
-                      IgnorePointer(
-                        ignoring: lastPage,
-                        child: Opacity(
-                          opacity: lastPage ? 0.0 : 1.0,
-                          child: Material(
-                            type: MaterialType.transparency,
-                            child: InkWell(
-                              borderRadius: BorderRadius.circular(100),
-                              child: Text(
-                                widget.skipText.toUpperCase(),
-                                style: textStyle,
-                              ),
-                              onTap: onSkip,
+                      if (currentPage > 0)
+                        Material(
+                          clipBehavior: Clip.antiAlias,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(100),
+                          ),
+                          type: MaterialType.transparency,
+                          child: InkWell(
+                            borderRadius: BorderRadius.circular(100),
+                            onTap: () => _controller!.previousPage(
+                              duration: Duration(milliseconds: 800),
+                              curve: Curves.fastOutSlowIn,
                             ),
+                            child: widget.backWidget ??
+                                Text(
+                                  "<-Kembali", // Text for Back button
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.white,
+                                  ),
+                                ),
                           ),
                         ),
-                      ),
                       Expanded(
                         child: Container(
                           width: 160,
@@ -365,7 +355,13 @@ class _IntroScreensState extends State<IntroScreens>
                               )
                             : InkWell(
                                 borderRadius: BorderRadius.circular(100),
-                                child: Text("Lanjut"),
+                                child: Text(
+                                  "Lanjut ->",
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.white,
+                                  ),
+                                ),
                                 onTap: () => _controller!.nextPage(
                                     duration: Duration(milliseconds: 800),
                                     curve: Curves.fastOutSlowIn),

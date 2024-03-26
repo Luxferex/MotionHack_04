@@ -10,7 +10,7 @@ class RegisterButton extends StatelessWidget {
     return ElevatedButton(
       style: ButtonStyle(),
       onPressed: () {
-        Navigator.pushNamed(context, '/login');
+        Navigator.pushNamed(context, '/Registration');
       },
       child: Container(
         height: 38,

@@ -16,13 +16,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
-    return Scaffold(
-      body: Column(
-        children: [
-          Text("Login berhasil"),
-        ],
-=======
     return ColorfulSafeArea(
       topColor: Colors.white,
       child: Scaffold(
@@ -32,7 +25,9 @@ class _HomePageState extends State<HomePage> {
           surfaceTintColor: Colors.white,
           elevation: 0,
           actions: [
-            CustomSearchBar(),
+            CustomSearchBar(
+              hintText: "Cari di EcoMerch",
+            ),
             Icon(
               Icons.notifications_outlined,
               size: 35,
@@ -82,7 +77,6 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ),
->>>>>>> origin/master
       ),
     );
   }

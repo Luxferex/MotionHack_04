@@ -1,5 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
+
 import 'package:flutter/material.dart';
 
 class login extends StatefulWidget {
@@ -19,10 +19,9 @@ class _loginState extends State<login> {
         email: _email!,
         password: _password!,
       );
-      // Jika masuk berhasil, lakukan tindakan yang sesuai, misalnya pindah ke halaman beranda.
-      Navigator.pushNamed(context, '/homepage');
+
+      Navigator.pushNamed(context, '/main');
     } catch (e) {
-      // Tangani kesalahan, misalnya tampilkan pesan kesalahan kepada pengguna.
       print('Error signing in: $e');
     }
   }
@@ -119,7 +118,7 @@ class _loginState extends State<login> {
                       MaterialStateProperty.all<Color>(Color(0xFF12372A)),
                 ),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/home');
+                  Navigator.pushNamed(context, '/main');
                 },
                 child: Container(
                   height: 40,

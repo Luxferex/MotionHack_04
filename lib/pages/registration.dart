@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:motion_hack_1/screen/MainScreen.dart';
 
 class Registration extends StatelessWidget {
   const Registration({super.key});
@@ -85,21 +86,29 @@ class Registration extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushNamed(context, '/homepage');
                 },
-                child: Container(
-                  height: 40,
-                  width: 320,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Lanjut",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => MainScreen()),
+                    );
+                  },
+                  child: Container(
+                    height: 40,
+                    width: 320,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Lanjut",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
+                          textAlign: TextAlign.center,
                         ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),

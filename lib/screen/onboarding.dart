@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:motion_hack_1/pages/Homepage.dart';
+import 'package:motion_hack_1/pages/HomePage.dart';
 import 'package:motion_hack_1/screen/VarText.dart';
 import 'package:motion_hack_1/screen/VarScreen.dart';
 
@@ -33,7 +33,6 @@ class OnBoardingState extends State<OnBoarding> with TickerProviderStateMixin {
           builder: (context) => HomePage(),
         ),
       ),
-      onSkip: () => print('Skipping the intro slides'),
       footerBgColor: Color.fromARGB(255, 18, 55, 42),
       activeDotColor: Colors.white,
       footerRadius: 18.0,
@@ -52,7 +51,7 @@ class OnBoardingState extends State<OnBoarding> with TickerProviderStateMixin {
         ),
         varText(
           title: 'Semua berguna',
-          imageAsset: 'assets/boarding1.png',
+          imageAsset: 'assets/boarding3.png',
           description: 'Donasikan barang bekasmu \nsupaya bernilai',
           headerBgColor: Colors.white,
         ),

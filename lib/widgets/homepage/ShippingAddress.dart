@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:motion_hack_1/pages/alamat/mainAlamat.dart';
 
 class ShippingAddress extends StatelessWidget {
   const ShippingAddress({super.key});
@@ -8,7 +9,13 @@ class ShippingAddress extends StatelessWidget {
     return Container(
       child: Row(
         children: [
-          Icon(Icons.location_pin),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => DaftarAlamatPage()));
+            },
+            child: Icon(Icons.location_pin),
+          ),
           SizedBox(width: 2),
           RichText(
             text: TextSpan(

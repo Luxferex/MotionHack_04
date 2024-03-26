@@ -31,7 +31,14 @@ class BottomNavBar extends StatelessWidget {
         // Profile
         BottomNavigationBarItem(
           activeIcon: Icon(Icons.build, size: 30),
-          icon: Image.asset("assets/icons/ic_profile.png"),
+          icon: GestureDetector(
+            onTap: () {
+              // Replace with your navigation logic (e.g., push a new page)
+              Navigator.pushNamed(
+                  context, '/profil'); // Example using named route
+            },
+            child: Image.asset("assets/icons/ic_profile.png"),
+          ),
           label: '',
         ),
       ],
