@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:motion_hack_1/pages/HomePage.dart';
+import 'package:motion_hack_1/pages/Homepage.dart';
 import 'package:motion_hack_1/pages/auth_pages.dart';
 import 'package:motion_hack_1/pages/login.dart';
 import 'package:motion_hack_1/pages/registration.dart';
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Motion_Hack_04',
-      initialRoute: '/',
+      initialRoute: '/home',
       routes: {
         '/': (context) => AuthPages(),
         '/login': (context) => login(),

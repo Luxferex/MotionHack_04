@@ -13,25 +13,25 @@ class BottomNavBar extends StatelessWidget {
         // Home
         BottomNavigationBarItem(
           activeIcon: Icon(Icons.home, size: 30),
-          icon: Icon(Icons.home_outlined, size: 30),
+          icon: Image.asset("assets/icons/ic_home.png"),
           label: '',
         ),
         // Sumbang
         BottomNavigationBarItem(
           activeIcon: Icon(Icons.menu_book, size: 30),
-          icon: Icon(Icons.menu_book_outlined, size: 30),
+          icon: Image.asset("assets/icons/ic_sumbang.png"),
           label: '',
         ),
         // Wishlist
         BottomNavigationBarItem(
           activeIcon: Icon(Icons.location_on, size: 30),
-          icon: Icon(Icons.location_on_outlined, size: 30),
+          icon: Image.asset("assets/icons/ic_wishlist.png"),
           label: '',
         ),
         // Profile
         BottomNavigationBarItem(
           activeIcon: Icon(Icons.build, size: 30),
-          icon: Icon(Icons.build_outlined, size: 30),
+          icon: Image.asset("assets/icons/ic_profile.png"),
           label: '',
         ),
       ],
