@@ -4,6 +4,7 @@ import 'package:motion_hack_1/pages/ProfilePage.dart';
 import 'package:motion_hack_1/pages/alamat/mainAlamat.dart';
 import 'package:motion_hack_1/pages/login.dart';
 import 'package:motion_hack_1/pages/registration.dart';
+import 'package:motion_hack_1/screen/DetailScreen.dart';
 import 'package:motion_hack_1/screen/MainScreen.dart';
 import 'package:motion_hack_1/screen/splashscreen.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
         '/home': (context) => HomePage(),
         '/profil': (context) => Profile(),
         '/alamat': (context) => DaftarAlamatPage(),
+        '/detail': (context) => DetailScreen(),
       },
     );
   }
