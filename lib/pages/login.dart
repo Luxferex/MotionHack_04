@@ -13,6 +13,7 @@ class _loginState extends State<login> {
   String? _email;
   String? _password;
 
+  // ignore: unused_element
   void _signInUser() async {
     try {
       await FirebaseAuth.instance.signInWithEmailAndPassword(
