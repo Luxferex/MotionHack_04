@@ -1,6 +1,6 @@
 import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/material.dart';
-import 'package:motion_hack_1/buttons/loginbutton.dart';
+import 'package:motion_hack_1/widgets/buttons/loginbutton.dart';
 
 class SumbangPage extends StatefulWidget {
   const SumbangPage({super.key});
