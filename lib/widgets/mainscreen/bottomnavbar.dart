@@ -25,7 +25,13 @@ class BottomNavBar extends StatelessWidget {
         // Wishlist
         BottomNavigationBarItem(
           activeIcon: Image.asset("assets/icons/ic_active_wishlist.png"),
-          icon: Image.asset("assets/icons/ic_wishlist.png"),
+          icon: GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(
+                  context, '/wishlist'); // Example using named route
+            },
+            child: Image.asset("assets/icons/ic_wishlist.png"),
+          ),
           label: '',
         ),
         // Profile
@@ -33,7 +39,6 @@ class BottomNavBar extends StatelessWidget {
           activeIcon: Image.asset("assets/icons/ic_active_profile.png"),
           icon: GestureDetector(
             onTap: () {
-              // Replace with your navigation logic (e.g., push a new page)
               Navigator.pushNamed(
                   context, '/profil'); // Example using named route
             },

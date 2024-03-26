@@ -176,7 +176,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                   ),
                   onPressed: () {
-                    Navigator.pushNamed(context, '/main');
+                    Navigator.pushNamed(context, '/');
                   },
                   child: Container(
                     height: 40,

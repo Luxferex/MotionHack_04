@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:motion_hack_1/pages/HomePage.dart';
+import 'package:motion_hack_1/pages/WishlistPage.dart';
 import 'package:motion_hack_1/pages/profile/ProfilePage.dart';
 import 'package:motion_hack_1/pages/alamat/mainAlamat.dart';
 import 'package:motion_hack_1/pages/login.dart';
@@ -38,6 +39,7 @@ class MyApp extends StatelessWidget {
         '/transaksi': (context) => RiwayatTransaksi(),
         '/tokoPil': (context) => tokoPilihan(),
         '/detail': (context) => DetailScreen(),
+        '/wishlist': (context) => WishlistPage(),
       },
       builder: (context, child) {
         return SafeArea(
