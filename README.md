@@ -1,16 +1,32 @@
-# motion_hack_1
+# EcoMerch
 
-A new Flutter project.
+Better app adalah aplikasi untuk baca buku, user dapat login dan register lalu juga user dapat melakukan tambah buku, edit buku, baca buku yang telah dimasukkan oleh user.
 
-## Getting Started
+## Installation
 
-This project is a starting point for a Flutter application.
+Clone project ini
 
-A few resources to get you started if this is your first Flutter project:
+```bash
+https://github.com/Luxferex/MotionHack_04.git
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Mendapatkan dependency
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+flutter pub get
+```
+
+Menjalankan project
+
+```bash
+flutter run
+```
+
+Akun demo
+
+```bash
+Email : abdulazisalayubbi@gmail.com
+Password : Lolitaa1233
+```
+
+## Screenshots
