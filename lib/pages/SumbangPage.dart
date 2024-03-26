@@ -1,6 +1,7 @@
 import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/material.dart';
 import 'package:motion_hack_1/widgets/buttons/loginbutton.dart';
+import 'package:motion_hack_1/widgets/sumbangpage/RiwayatView.dart';
 
 class SumbangPage extends StatefulWidget {
   const SumbangPage({super.key});
@@ -90,33 +91,7 @@ class _SumbangPageState extends State<SumbangPage> {
                 ),
               ),
               SizedBox(height: 10),
-              Container(
-                child: Row(
-                  children: [
-                    Image.asset("assets/icons/ic_fashion.png"),
-                    SizedBox(width: 10),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Fashion",
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Text(
-                          "Kamu telah menyumbang 10 baju!",
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        )
-                      ],
-                    ),
-                  ],
-                ),
-              ),
+              RiwayatView(),
             ],
           ),
         ),

@@ -1,5 +1,6 @@
 import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/material.dart';
+import 'package:motion_hack_1/widgets/detailscreen/BeliButton.dart';
 import 'package:motion_hack_1/widgets/detailscreen/ItemViewHorizontal.dart';
 import 'package:motion_hack_1/widgets/detailscreen/ProductDetail.dart';
 import 'package:motion_hack_1/widgets/detailscreen/TokoView.dart';
@@ -76,39 +77,7 @@ class _DetailScreenState extends State<DetailScreen> {
             ),
           ),
         ),
-        bottomNavigationBar: Padding(
-          padding: const EdgeInsets.only(left: 10.0, right: 10.0, bottom: 25.0),
-          child: Container(
-            width: double.infinity,
-            padding: EdgeInsets.symmetric(vertical: 5),
-            decoration: BoxDecoration(
-              color: Color(0xFF12372A),
-              borderRadius: BorderRadius.circular(20),
-            ),
-            child: TextButton(
-              onPressed: () {},
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    Icons.shopping_cart,
-                    color: Colors.white,
-                    size: 40,
-                  ),
-                  SizedBox(width: 10),
-                  Text(
-                    "Beli sekarang",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
+        bottomNavigationBar: BeliButton(),
       ),
     );
   }
