@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:motion_hack_1/pages/HomePage.dart';
 import 'package:motion_hack_1/screen/VarText.dart';
 import 'package:motion_hack_1/screen/VarScreen.dart';
 
@@ -9,7 +10,7 @@ class MyApp extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) => MaterialApp(
-        title: 'intro screen demo',
+        title: 'onboarding',
         theme: ThemeData(
           primaryColor: primary,
         ),
@@ -29,7 +30,7 @@ class OnBoardingState extends State<OnBoarding> with TickerProviderStateMixin {
     var screens = IntroScreens(
       onDone: () => Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => NextPage(),
+          builder: (context) => HomePage(),
         ),
       ),
       onSkip: () => print('Skipping the intro slides'),
@@ -37,23 +38,23 @@ class OnBoardingState extends State<OnBoarding> with TickerProviderStateMixin {
       activeDotColor: Colors.white,
       footerRadius: 18.0,
       slides: [
-        IntroScreen(
+        varText(
           title: 'Produk ramah lingkungan\nberkualitas',
           imageAsset: 'assets/boarding1.png',
-          description: 'Dapatkan barangmu tanpa takut mencemari lingkungan',
+          description: 'Dapatkan barangmu tanpa \ntakut mencemari lingkungan',
           headerBgColor: Colors.white,
         ),
-        IntroScreen(
+        varText(
           title: 'Pelayanan cepat dan praktis',
           headerBgColor: Colors.white,
           imageAsset: 'assets/boarding2.png',
           description: "Pelayanan cepat barang aman",
         ),
-        IntroScreen(
+        varText(
           title: 'Semua berguna',
+          imageAsset: 'assets/boarding1.png',
+          description: 'Donasikan barang bekasmu \nsupaya bernilai',
           headerBgColor: Colors.white,
-          imageAsset: 'assets/boarding3.png',
-          description: "Donasikan barang bekasmu supaya bernilai",
         ),
       ],
     );

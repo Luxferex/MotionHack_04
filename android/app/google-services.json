@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "566358683728",
+    "project_id": "authmotion-4",
+    "storage_bucket": "authmotion-4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:566358683728:android:fd0af37844849c96532155",
+        "android_client_info": {
+          "package_name": "com.motion_hack_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGlKVXtR1KhhJXdhG4ZfM_0Xelkhp73eY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

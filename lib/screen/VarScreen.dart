@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:motion_hack_1/pages/indicator.dart';
+import 'package:motion_hack_1/buttons/registerbutton.dart';
 import 'package:motion_hack_1/screen/VarText.dart';
+import 'package:motion_hack_1/buttons/loginbutton.dart';
 
 enum IndicatorType { CIRCLE, LINE, DIAMOND }
 
@@ -38,7 +40,7 @@ class IntroScreens extends StatefulWidget {
 
   ///sets your slides
   ///[List<IntroScreen>]
-  final List<IntroScreen> slides;
+  final List<varText> slides;
 
   ///sets the skip widget text
   ///[String]
@@ -83,6 +85,7 @@ class IntroScreens extends StatefulWidget {
   ///[Color]
   ///sets the wrapper container's background color, defaults to white
   final Color containerBg;
+  final Widget? footer;
 
   const IntroScreens({
     required this.slides,
@@ -98,11 +101,12 @@ class IntroScreens extends StatefulWidget {
     this.doneWidget,
     this.activeDotColor = Colors.white,
     this.inactiveDotColor,
-    this.skipText = 'skip',
+    this.skipText = 'Skip',
     this.viewPortFraction = 1.0,
     this.textColor = Colors.white,
     this.footerPadding = const EdgeInsets.all(24),
     this.footerBgColor = const Color(0xff51adf6),
+    this.footer,
   }) : assert(slides.length > 0);
 }
 
@@ -113,7 +117,7 @@ class _IntroScreensState extends State<IntroScreens>
   int currentPage = 0;
   bool lastPage = false;
   late AnimationController animationController;
-  IntroScreen? currentScreen;
+  varText? currentScreen;
 
   @override
   void initState() {
@@ -132,10 +136,8 @@ class _IntroScreensState extends State<IntroScreens>
 
   get onSkip => this.widget.onSkip != null ? this.widget.onSkip : defaultOnSkip;
 
-  defaultOnSkip() => animationController.animateTo(
-        widget.slides.length - 1,
-        duration: Duration(milliseconds: 400),
-        curve: Curves.fastOutSlowIn,
+  defaultOnSkip() => _controller!.jumpToPage(
+        2,
       );
 
   TextStyle get textStyle =>
@@ -145,14 +147,6 @@ class _IntroScreensState extends State<IntroScreens>
         fontSize: 18,
         color: Colors.white,
         fontWeight: FontWeight.normal,
-      );
-
-  Widget get next =>
-      this.widget.nextWidget ??
-      Icon(
-        Icons.arrow_forward,
-        size: 28,
-        color: widget.textColor,
       );
 
   Widget get done =>
@@ -203,6 +197,8 @@ class _IntroScreensState extends State<IntroScreens>
         child: Stack(
           clipBehavior: Clip.none,
           children: <Widget>[
+            //LOGIN BUTTON YANG DIEDIT
+
             PageView.builder(
               itemCount: widget.slides.length,
               onPageChanged: (index) {
@@ -292,7 +288,12 @@ class _IntroScreensState extends State<IntroScreens>
                           color: widget.textColor,
                         ),
                         textAlign: TextAlign.center,
-                      )
+                      ),
+                      SizedBox(
+                        height: 50,
+                      ),
+                      LoginButton(),
+                      RegisterButton(),
                     ],
                   ),
                 ),
@@ -364,7 +365,7 @@ class _IntroScreensState extends State<IntroScreens>
                               )
                             : InkWell(
                                 borderRadius: BorderRadius.circular(100),
-                                child: next,
+                                child: Text("Lanjut"),
                                 onTap: () => _controller!.nextPage(
                                     duration: Duration(milliseconds: 800),
                                     curve: Curves.fastOutSlowIn),
@@ -375,20 +376,6 @@ class _IntroScreensState extends State<IntroScreens>
                 ),
               ),
             ),
-            //app title
-            /*Positioned(
-              top: 20,
-              left: 0,
-              right: 0,
-              child: Padding(
-                padding: const EdgeInsets.all(12),
-                child: Text(
-                  widget.appTitle,
-                  style: textStyle.apply(
-                      fontSizeDelta: 12, fontWeightDelta: 8, color: Colors.red),
-                ),
-              ),
-            ),*/
           ],
         ),
       ),

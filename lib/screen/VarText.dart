@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class IntroScreen extends StatelessWidget {
+class varText extends StatelessWidget {
   ///This is a builder for an intro screen
   ///
   ///
@@ -32,10 +32,11 @@ class IntroScreen extends StatelessWidget {
   ///widget to use as the header part of your screen
   ///[Widget]
   final Widget? header;
+  final Widget? footer;
 
   int? _pageIndex;
 
-  IntroScreen({
+  varText({
     required String this.title,
     this.headerPadding = const EdgeInsets.all(12),
     required String this.description,
@@ -43,6 +44,7 @@ class IntroScreen extends StatelessWidget {
     this.headerBgColor = Colors.white,
     this.textStyle,
     this.imageAsset,
+    this.footer,
   });
 
   set index(val) => this._pageIndex = val;
@@ -52,11 +54,10 @@ class IntroScreen extends StatelessWidget {
     var screenSize = MediaQuery.of(context).size;
     return Container(
       width: double.infinity,
-      height: screenSize.height,
       child: Column(
         children: <Widget>[
           Container(
-            height: screenSize.height * .650,
+            height: screenSize.height * 0.7,
             padding: headerPadding,
             decoration: BoxDecoration(
               color: headerBgColor,
